@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" description="Introducing the web storage API. Local and session storage">
+    <title>Web Storage</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-right" id="here">Client-Side Storage</h1>
+        </div>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li role="navigation" class="active"><a href="#">Client-Side Storage</a></li>
+                <li role="navigation" class="active"><a href="localStorage/localStorage.html">localStorage example</a></li>
+                <li role="navigation" class="active"><a href="sessionStorage/sessionStorage.html">sessionStorage example</a></li>
+            </ul>
+        </nav>
+        <div class="row done">
+            <div class="col-md-12">
+                <h2>Client-Side Data Storage</h2>
+                <p>Sometimes you may want for your application to be able to remember something. For example for calculations or for passwords. Since we cannot use JavaScript variables because those are thrown away every time a page is closed, we must find a way to solve that problem.</p>
+                <p>We could set up a server to manage the data making your app a <em>server-side persistant</em> application. But sometimes it is ok to keep data in the browser, effectively writting less code and obtaining the same results. This approach will make your application <em>client-side persistant.</em></p>
+                <p>For Client-Side storage we could set up <b>Cookies</b> which will cover briefly <b>OR</b> we could use the two mechanisms provided by the Web Storage API to store key/value pairs. We are talking about <b>localStorage</b> and <b>sessionStorage</b>. Both are properties of the Window object.</p>
+                <p></p>
+            </div>
+            <div class="col-md-12">
+                <h2>localStorage</h2>
+                <p>Invoking localStorage will create an instance of the Storage object through which data can be set, retrieved or removed. The localStorage object has no expiration set and stores ALL data as <em>String</em> data in a way that survives page reloads.</p>
+            </div>
+             <div class="col-md-12">
+                <h2>sessionsStorage</h2>
+                <p>As opposed to localStorage, data stored as <b>sessionStorage</b> is cleared when the page sessions ends. This could be useful for storing calculation values.</p>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="storage.js" type="text/javascript"></script>
+</body>
+
+</html>
